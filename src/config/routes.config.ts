@@ -9,76 +9,27 @@ const LoadableConfig = {
   
 export const ROUTES = [
     {
-      key: "Home",
+      key: "ExpenseHome",
       routeProps: {
-        path: "/home",
+        path: "/",
+        // element: <Ex/>,
         component: Lodable({
-          loader: () =>
-            import("../modules/Home"),
-          loading: RouteLoader,
-          ...LoadableConfig,
+            loader: () => <ExC/>,
+            loading: RouteLoader,
+            ...LoadableConfig,
         }),
       }
     },
     {
-      key: "Products",
-      routeProps: {
-        path: "/products",
-        component: Lodable({
-          loader: () =>
-            import("../modules/Products"),
-          loading: RouteLoader,
-          ...LoadableConfig,
-        }),
-      }
-    },
-    {
-      key: "cart",
-      routeProps: {
-        path: "/cart",
-        component: Lodable({
-          loader: () =>
-            import("../modules/Checkout"),
-          loading: RouteLoader,
-          ...LoadableConfig,
-        }),
-      }
-    },
-    {
-      key: "todos",
-      routeProps: {
-        path: "/todos",
-        component: Lodable({
-          loader: () =>
-            import("../modules/BackendIntegratioCheck"),
-          loading: RouteLoader,
-          ...LoadableConfig,
-        }),
-      }
-    },
-    {
-      key: "Order",
-      routeProps: {
-        path: "/orders/:orderid",
-        component: Lodable({
-          loader: () =>
-            import("../modules/Orders"),
-          loading: RouteLoader,
-          ...LoadableConfig,
-        }),
-      }
-    },
-    {
-      key: "Orders",
-      routeProps: {
-        path: "/orders/",
-        component: Lodable({
-          loader: () =>
-            import("../modules/Orders"),
-          loading: RouteLoader,
-          ...LoadableConfig,
-        }),
-      }
+        key: "ExpenseHome2",
+        routeProps: {
+          path: "/home",
+        //   element: <Ex/>,
+          component: Lodable({
+            loader: () => <ExC/>,
+              loading: RouteLoader,
+            ...LoadableConfig,
+          }),
+        }
     }
 ]
-
